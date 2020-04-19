@@ -8,6 +8,7 @@
   <description>创建maven的父工程</description>
   
   
+  
   <properties>
    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    <maven.compiler.source>1.8</maven.compiler.source>
@@ -93,9 +94,8 @@
    </dependencies>
   </dependencyManagement>
   <modules>
-  	<module>microservicecloud-api</module>
-  	<module>microservicecloud-provider-dept-8001</module>
-  	<module>microservicecloud-eureka-7001</module>
-  	<module>test</module>
+  	
+  	<module>provider-dept-8001</module>
+  	<module>cloud-api</module>
   </modules>
 </project>
