@@ -3,16 +3,19 @@ server:
   
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl 
+    #cache-enabled: true   #开启MyBatis的二级缓存
   type-aliases-package: com.springcloud    # 所有Entity别名类所在包
-  mapper-locations: classpath*:com/springcloud/mapper/**/*.xml                       # mapper映射文件
+  mapper-locations: classpath*:com/springcloud/mapper/**/*.xml    # mapper映射文件所在路径
   #mapper-locations: classpath*:mybatis/mapper/**/*.xml
 
 #mybatis 日志输出，其中mapper映射文件（写SQL语句的接口）的包名为：com.springcloud.mapper
 #logging: 
 #  level: 
 #    com: 
-#      springcloud: 
+#    springcloud: 
 #        mapper: DEBUG
+
 
 
    
