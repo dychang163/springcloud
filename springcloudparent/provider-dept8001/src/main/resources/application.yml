@@ -17,11 +17,15 @@ mybatis:
 #        mapper: DEBUG
 
 
-
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url: 
+      defaultZone: http://localhost:7021/eureka
+ 
    
 spring:
    application:
-    name: microservicecloud-dept 
+    name: provider-dept-8001
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包

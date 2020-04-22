@@ -17,6 +17,7 @@
      <groupId>junit</groupId>
      <artifactId>junit</artifactId>
    </dependency>
+   <!-- mysql + 连接池 start -->
    <dependency>
      <groupId>mysql</groupId>
      <artifactId>mysql-connector-java</artifactId>
@@ -25,10 +26,8 @@
      <groupId>com.alibaba</groupId>
      <artifactId>druid</artifactId>
    </dependency>
-   <dependency>
-     <groupId>ch.qos.logback</groupId>
-     <artifactId>logback-core</artifactId>
-   </dependency>
+   <!-- mysql + 连接池 end -->
+	<!-- springboot start  -->
    <dependency>
      <groupId>org.mybatis.spring.boot</groupId>
      <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -41,17 +40,32 @@
      <groupId>org.springframework.boot</groupId>
      <artifactId>spring-boot-starter-web</artifactId>
    </dependency>
+   
    <dependency>
      <groupId>org.springframework.boot</groupId>
      <artifactId>spring-boot-starter-test</artifactId>
    </dependency>
-   <!-- 修改后立即生效，热部署 start -->
+   <!-- springboot end  -->
+   <!-- 日志 start -->
+    <dependency>
+     <groupId>ch.qos.logback</groupId>
+     <artifactId>logback-core</artifactId>
+   </dependency>
    
-<!--    <dependency>
-     <groupId>org.springframework</groupId>
-     <artifactId>springloaded</artifactId>
-   </dependency> -->
-   <!-- https://mvnrepository.com/artifact/org.springframework/springloaded -->
+   <!-- 日志 end -->
+   
+   <!-- 将微服务 provider 侧注册进 eureka start -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	</dependency>
+   <dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-starter-config</artifactId>
+   </dependency>
+   <!-- 将微服务 provider 侧注册进 eureka end -->
+   
+   <!-- 修改后立即生效，热部署 start -->
 	<dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>springloaded</artifactId>

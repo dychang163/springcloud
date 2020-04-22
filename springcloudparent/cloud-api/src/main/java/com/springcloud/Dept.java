@@ -4,11 +4,13 @@ import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 @AllArgsConstructor
 @Data
 @Accessors(chain=true)
+@ToString
 public class Dept implements Serializable{
 	private Long 	deptno; // 主键
 	private String 	dname; // 部门名称
