@@ -116,10 +116,36 @@
      
    </dependencies>
   </dependencyManagement>
+  
+  <build>
+   <finalName>microservicecloud</finalName>
+   <resources>
+     <resource>
+       <directory>src/main/resources</directory>
+       <filtering>true</filtering>
+     </resource>
+   </resources>
+   <plugins>
+     <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-resources-plugin</artifactId>
+       <configuration>
+         <delimiters>
+          <delimit>$</delimit>
+         </delimiters>
+       </configuration>
+     </plugin>
+   </plugins>
+  </build>
   <modules>
   	
   	<module>provider-dept-8001</module>
   	<module>cloud-api</module>
   	<module>eurake-7021</module>
+  	<module>eureka-7022</module>
+  	<module>eureka7023</module>
+  	<module>provider-dept-8002</module>
+  	<module>provider-dept-8003</module>
   </modules>
+  
 </project>

@@ -20,7 +20,13 @@ mybatis:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url: 
-      defaultZone: http://localhost:7021/eureka
+      #defaultZone: http://localhost:7021/eureka #这个是单个eureka的时候配置
+      defaultZone: http://eureka7021.com:7021/eureka/,http://eureka7022.com:7022/eureka/,http://eureka7023.com:7023/eureka/   #eureka集群配置
+      
+  instance: 
+    instance-id: provider-dept-8001  #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
+    
  
    
 spring:
@@ -38,4 +44,8 @@ spring:
       max-total: 5                                          # 最大连接数
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
 
-    
+info:
+  app.name: springcloud
+  company.name: www.dycspringcloud.com
+  build.artifactId: provider-dept-8001
+  build.version: 0.0.1-SNAPSHOT

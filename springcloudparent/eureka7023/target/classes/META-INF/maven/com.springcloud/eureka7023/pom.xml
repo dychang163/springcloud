@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.springcloud</groupId>
+    <artifactId>springcloudparent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>eureka7023</artifactId>
+   <dependencies>
+   <!--eureka-server服务端 start-->
+
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+	</dependency>
+   <!--eureka-server服务端 end-->
+   <!-- 修改后立即生效，热部署 start -->
+   
+<!--    <dependency>
+     <groupId>org.springframework</groupId>
+     <artifactId>springloaded</artifactId>
+   </dependency> -->
+   <!-- https://mvnrepository.com/artifact/org.springframework/springloaded -->
+	<dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>springloaded</artifactId>
+   		<version>1.2.8.RELEASE</version>
+	</dependency>
+   
+   <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-devtools</artifactId>
+   </dependency>
+   <!-- 修改后立即生效，热部署 end -->
+  </dependencies>
+ 
+</project>
